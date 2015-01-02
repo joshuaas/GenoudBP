@@ -1,0 +1,11 @@
+this package is an ANN toolbox,which the early published genoud algorithm and rgenoud package is employed to optimize BP process
+
+run the following example for a test 
+
+require(parallel)
+   data(pima)
+   cl  <- makeCluster(getOption("cl.cores",detectCores(logical =FALSE)))  
+   f  <- GenoudBPModeler(pima,hid_num =9,cluster =cl )
+
+
+

@@ -1,0 +1,10 @@
+Package: GenoudBP
+Type: Package
+Title: building ANN with BP and Genoud
+Version: 1.0
+Depends: R (>= 2.14), stats,pROC,rgenoud,parallel
+Imports:pROC,rgenoud,parallel
+Author: Zhiyong Yang<1079637988@qq.com>
+Maintainer: Zhiyong Yang<1079637988@qq.com>
+Description: this package is ANN toolbox ,where the early publised Genoud Algorithm and the rgenoud package is employed to Optimize BP process
+License: GPL

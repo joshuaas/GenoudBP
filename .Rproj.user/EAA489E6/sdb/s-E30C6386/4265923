@@ -1,0 +1,16 @@
+{
+    "contents" : "\\name{GenoudBP-package}\n\\alias{GenoudBP-package}\n\\alias{GenoudBP}\n\\docType{package}\n\\title{\nbuilding ANN with BP and Genoud\n}\n\\description{\nthis package is ANN toolbox ,where the early publised Genoud Algorithm and the rgenoud package is employed to Optimize BP process\n}\n\\details{\n\\tabular{ll}{\nPackage: \\tab GenoudBP\\cr\nType: \\tab Package\\cr\nVersion: \\tab 1.0\\cr\nDate: \\tab 2015-01-02\\cr\nLicense: \\tab GPL\\cr\n}\n\n    data(pima)\n    GenoudBPModeler(pima,hid_num =9)\n}\n\\author{\n      Zhiyong Yang\n\nMaintainer: Zhiyong Yang <1079637988@qq.com>\n\n}\n\\references{\n    Walter Mebane, Jr. and Jasjeet S. Sekhon. 2011.Genetic Optimization Using Derivatives: The rgenoud package for R.Journal of Statistical Software, 42(11): 1-26.\n    \n  Xavier Robin, Natacha Turck, Alexandre Hainard, Natalia Tiberti, Frédérique Lisacek,Jean-Charles Sanchez and Markus Müller (2011). pROC: an open-source package for R and S+ to analyze and compare ROC curves. BMC Bioinformatics, 12, p. 77.  DOI: 10.1186/1471-2105-12-77\n}\n\n\\examples{\n   ##for multicore version\n   require(parallel)\n   data(pima)\n   cl  <- makeCluster(getOption(\"cl.cores\",detectCores(logical =FALSE)))  \n   f  <- GenoudBPModeler(pima,hid_num =9,cluster =cl )\n}\n",
+    "created" : 1420197676565.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3746240978",
+    "id" : "4265923",
+    "lastKnownWriteTime" : 1420194767,
+    "path" : "~/GenoudBP/man/GenoudBP-package.Rd",
+    "project_path" : "man/GenoudBP-package.Rd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_doc"
+}
