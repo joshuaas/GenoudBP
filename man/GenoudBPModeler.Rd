@@ -56,4 +56,4 @@ Zhiyong Yang}
 
 
 \seealso{
-GenoudBP}
+genoudBp}
