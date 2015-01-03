@@ -9,7 +9,7 @@
 optimize BP neuron network 
 }
 \usage{
-GenoudBPModeler(df, separated = F, cluster = F, ratio = 0.85, lambda = 0.2, hid_num, maxiter = 100, BFGS = F, ...)
+GenoudBPModeler(df, separated = F, cluster = F, ratio = 0.85, lambda = 0.2, hid_num, maxiter = 100, BFGS = F, pop.size=40,...)
 }
 
 \arguments{
@@ -35,6 +35,9 @@ see genoudBP}
   \item{BFGS}{
 see genoudBP
 }
+ \item{pop.size}{
+  the population size
+ }
 
 }
 

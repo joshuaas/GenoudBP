@@ -12,7 +12,7 @@
 #'@return roc_train : roc performance on traning data
 #'@return roc_test  : roc performance on test    data
 
-GenoudBPModeler <- function(df,separated =F,cluster =F,ratio = 0.85,lambda =0.2,hid_num,maxiter =100,BFGS=F,...){
+GenoudBPModeler <- function(df,separated =F,cluster =F,ratio = 0.85,lambda =0.2,hid_num,maxiter =100,BFGS=F,pop.size=40,...){
 
         if(!separated){
             df <- dataSeparation(df,ratio)
@@ -21,7 +21,7 @@ GenoudBPModeler <- function(df,separated =F,cluster =F,ratio = 0.85,lambda =0.2,
         
         model <- genoudBp(train_x = df$train_x, train_y = df$train_y, multi = df$multi,
                           n_out = df$n_out, center = df$center, scale = df$std
-                          ,hid_num = hid_num ,maxiter = maxiter, lambda =lambda, cluster = cluster,BFGS =BFGS)
+                          ,hid_num = hid_num ,maxiter = maxiter, lambda =lambda, cluster = cluster,BFGS =BFGS,pop.size = pop.size)
         
         roc_train <- performanceEval(model, df$train_x , df$train_y , scaled = T, "training data")
         roc_test <- performanceEval(model, df$test_x, df$test_y, scaled = T, "test data")

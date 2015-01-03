@@ -24,7 +24,7 @@
 #'@return w2_fit : W^(2) i.e. the weight matrix between hidden layer and output layer 
 #'@return op     : the genoudBP result
 
-genoudBp <- function(train_x,train_y,multi,hid_num,lambda=0.2,maxiter=100,cluster = F,center,scale,n_out,BFGS = BFGS,...){
+genoudBp <- function(train_x,train_y,multi,hid_num,lambda=0.2,maxiter=100,cluster = F,center,scale,n_out,BFGS,pop.size,...){
  
 
     # sigmoid function ---'----------------------------------------------------
@@ -159,7 +159,7 @@ genoudBp <- function(train_x,train_y,multi,hid_num,lambda=0.2,maxiter=100,cluste
 
         op=genoud(fn=fn,gr=grad,nvars=nvar,starting.values=inpar,print.level=0,
                   Domains=domains,boundary.enforcement=1,max.generations=maxiter,...,
-                  debug=T,gradient.check=F,pop.size=40,cluster = cluster,P9=0,BFGS =BFGS);
+                  debug=T,gradient.check=F,pop.size=pop.size,cluster = cluster,BFGS =BFGS);
 
         w1_fit=matrix(op$par[1:(hid_num*(n_f))],byrow=T,nrow=hid_num);
         w2_fit=matrix(op$par[(hid_num*n_f+1):(hid_num*n_f+ n_out *(hid_num+1) )],

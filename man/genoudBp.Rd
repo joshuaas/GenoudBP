@@ -7,7 +7,7 @@
 this function is used to build an ANN model based on genoudBP algrithm and returning a model of
 a S3 class genoudBP}
 \usage{
-genoudBp(train_x, train_y, multi, hid_num, lambda = 0.2, maxiter = 100, cluster = F, center, scale, n_out, BFGS = BFGS, ...)
+genoudBp(train_x, train_y, multi, hid_num, lambda = 0.2, maxiter = 100, cluster = F, center, scale, n_out, BFGS, pop.size,...)
 }
 \arguments{
   \item{train_x}{
@@ -43,6 +43,9 @@ genoudBp(train_x, train_y, multi, hid_num, lambda = 0.2, maxiter = 100, cluster 
 }
   \item{BFGS}{
   a logical value to indicate whether to use BFGS algorithm during genoud
+}
+\item{pop.size}{
+ the population size
 }
 }
  
