@@ -4,7 +4,7 @@ run the following example for a test
 
 require(parallel)
    data(pima)
-   cl  <- makeCluster(getOption("cl.cores",detectCores(logical =FALSE)))  
+   cl  <- makeCluster(getOption("cl.cores",detectCores(logical =FALSE) - 1))  
    f  <- GenoudBPModeler(pima,hid_num =9,cluster =cl )
 
 
