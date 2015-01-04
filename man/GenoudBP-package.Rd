@@ -36,6 +36,6 @@ Maintainer: Zhiyong Yang <1079637988@qq.com>
    ##for multicore version
    require(parallel)
    data(pima)
-   cl  <- makeCluster(getOption("cl.cores",detectCores(logical =FALSE)))  
+   cl  <- makeCluster(getOption("cl.cores",detectCores(logical =FALSE)) -1)  
    f  <- GenoudBPModeler(pima,hid_num =9,cluster =cl )
 }
