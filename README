@@ -6,6 +6,6 @@ require(parallel)
    data(pima)
    cl  <- makeCluster(getOption("cl.cores",detectCores(logical =FALSE)))  
    f  <- GenoudBPModeler(pima,hid_num =9,cluster =cl )
-
+####
 
 
