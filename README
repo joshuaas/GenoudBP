@@ -1,3 +1,5 @@
+author Zhiyong Yang
+University of Science and Technology Beijing
 this package is an ANN toolbox,which the early published genoud algorithm and rgenoud package is employed to optimize BP process
 
 run the following example for a test 
